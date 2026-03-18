@@ -16,7 +16,7 @@ export default function Player() {
 
   function ScoreLogic() {
     const value: number = Math.floor(Math.random() * 7);
-    setState(value);
+    setState((pre)=>value+pre);
     navigation.navigate("Roll", { value: value });
   }
 

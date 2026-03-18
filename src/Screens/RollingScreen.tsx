@@ -8,9 +8,10 @@ export default function RollingScreen({ route, navigation }: any) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
-
-    navigation.replace("Game");
+    }, 1000);
+    setTimeout(() => {
+      navigation.goBack("Game");
+    }, 2000);
   });
 
   function ValuePic() {
